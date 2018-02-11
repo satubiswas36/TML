@@ -1,5 +1,5 @@
 package com.product.entity;
-// Generated Jan 28, 2018 2:52:02 PM by Hibernate Tools 4.3.1
+// Generated Feb 6, 2018 5:16:54 PM by Hibernate Tools 4.3.1
 
 
 import javax.persistence.Column;
@@ -44,7 +44,7 @@ public class UomDetails  implements java.io.Serializable {
     }
 
     
-    @Column(name="name", nullable=false, length=120)
+    @Column(name="name", length=120)
     public String getName() {
         return this.name;
     }
@@ -54,7 +54,7 @@ public class UomDetails  implements java.io.Serializable {
     }
 
     
-    @Column(name="spec", nullable=false, length=120)
+    @Column(name="spec", length=120)
     public String getSpec() {
         return this.spec;
     }

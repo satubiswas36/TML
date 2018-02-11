@@ -1,5 +1,5 @@
 package com.product.entity;
-// Generated Jan 28, 2018 2:52:02 PM by Hibernate Tools 4.3.1
+// Generated Feb 6, 2018 5:16:54 PM by Hibernate Tools 4.3.1
 
 
 import javax.persistence.Column;
@@ -21,12 +21,12 @@ public class StockAvail  implements java.io.Serializable {
 
      private Integer id;
      private String name;
-     private int quantity;
+     private Integer quantity;
 
     public StockAvail() {
     }
 
-    public StockAvail(String name, int quantity) {
+    public StockAvail(String name, Integer quantity) {
        this.name = name;
        this.quantity = quantity;
     }
@@ -44,7 +44,7 @@ public class StockAvail  implements java.io.Serializable {
     }
 
     
-    @Column(name="name", nullable=false, length=120)
+    @Column(name="name", length=120)
     public String getName() {
         return this.name;
     }
@@ -54,12 +54,12 @@ public class StockAvail  implements java.io.Serializable {
     }
 
     
-    @Column(name="quantity", nullable=false)
-    public int getQuantity() {
+    @Column(name="quantity")
+    public Integer getQuantity() {
         return this.quantity;
     }
     
-    public void setQuantity(int quantity) {
+    public void setQuantity(Integer quantity) {
         this.quantity = quantity;
     }
 

@@ -10,5 +10,7 @@
 
     <body>
         <a href="removeProduct">Remove</a>
+        <a href="customer">Customer Registration</a>
+        <a href="supplier">Supplier</a>
     </body>
 </html>

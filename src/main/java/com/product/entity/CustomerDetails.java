@@ -1,5 +1,5 @@
 package com.product.entity;
-// Generated Jan 28, 2018 2:52:02 PM by Hibernate Tools 4.3.1
+// Generated Feb 6, 2018 5:16:54 PM by Hibernate Tools 4.3.1
 
 
 import javax.persistence.Column;
@@ -24,12 +24,12 @@ public class CustomerDetails  implements java.io.Serializable {
      private String customerAddress;
      private String customerContact1;
      private String customerContact2;
-     private int balance;
+     private Integer balance;
 
     public CustomerDetails() {
     }
 
-    public CustomerDetails(String customerName, String customerAddress, String customerContact1, String customerContact2, int balance) {
+    public CustomerDetails(String customerName, String customerAddress, String customerContact1, String customerContact2, Integer balance) {
        this.customerName = customerName;
        this.customerAddress = customerAddress;
        this.customerContact1 = customerContact1;
@@ -50,7 +50,7 @@ public class CustomerDetails  implements java.io.Serializable {
     }
 
     
-    @Column(name="customer_name", nullable=false, length=200)
+    @Column(name="customer_name", length=200)
     public String getCustomerName() {
         return this.customerName;
     }
@@ -60,7 +60,7 @@ public class CustomerDetails  implements java.io.Serializable {
     }
 
     
-    @Column(name="customer_address", nullable=false, length=500)
+    @Column(name="customer_address", length=500)
     public String getCustomerAddress() {
         return this.customerAddress;
     }
@@ -70,7 +70,7 @@ public class CustomerDetails  implements java.io.Serializable {
     }
 
     
-    @Column(name="customer_contact1", nullable=false, length=100)
+    @Column(name="customer_contact1", length=100)
     public String getCustomerContact1() {
         return this.customerContact1;
     }
@@ -80,7 +80,7 @@ public class CustomerDetails  implements java.io.Serializable {
     }
 
     
-    @Column(name="customer_contact2", nullable=false, length=100)
+    @Column(name="customer_contact2", length=100)
     public String getCustomerContact2() {
         return this.customerContact2;
     }
@@ -90,12 +90,12 @@ public class CustomerDetails  implements java.io.Serializable {
     }
 
     
-    @Column(name="balance", nullable=false)
-    public int getBalance() {
+    @Column(name="balance")
+    public Integer getBalance() {
         return this.balance;
     }
     
-    public void setBalance(int balance) {
+    public void setBalance(Integer balance) {
         this.balance = balance;
     }
 

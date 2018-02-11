@@ -41,15 +41,23 @@ Contributor(s):
 -->
 <hibernate-reverse-engineering>
   <schema-selection match-catalog="tml"/>
-  <table-filter match-name="customer_details"/>
-  <table-filter match-name="stock_user"/>
-  <table-filter match-name="supplier_details"/>
-  <table-filter match-name="uom_details"/>
-  <table-filter match-name="category_details"/>
+  <table-filter match-name="store_details"/>
   <table-filter match-name="stock_details"/>
   <table-filter match-name="stock_avail"/>
-  <table-filter match-name="store_details"/>
-  <table-filter match-name="stock_sales"/>
   <table-filter match-name="stock_entries"/>
-  <table-filter match-name="transactions"/>  
+  <table-filter match-name="out_stock"/>
+  <table-filter match-name="customer_details"/>
+  <table-filter match-name="stock_sales"/>
+  <table-filter match-name="stock_user"/>
+  <table-filter match-name="supplier"/>
+  <table-filter match-name="supplier_details"/>
+  <table-filter match-name="category_details"/>
+  <table-filter match-name="user"/>
+  <table-filter match-name="transactions"/>
+  <table-filter match-name="uom_details"/>
+  <table-filter match-name="customer"/>
+  <table-filter match-name="product_info"/>
+  <table-filter match-name="available_product"/>
+  <table-filter match-name="category"/>
+  <table-filter match-name="in_stock"/>
 </hibernate-reverse-engineering>

@@ -1,5 +1,5 @@
 package com.product.entity;
-// Generated Jan 28, 2018 2:52:02 PM by Hibernate Tools 4.3.1
+// Generated Feb 6, 2018 5:16:54 PM by Hibernate Tools 4.3.1
 
 
 import java.math.BigDecimal;
@@ -28,11 +28,11 @@ public class StockEntries  implements java.io.Serializable {
      private String stockName;
      private String stockSupplierName;
      private String category;
-     private int quantity;
+     private Integer quantity;
      private BigDecimal companyPrice;
      private BigDecimal sellingPrice;
-     private int openingStock;
-     private int closingStock;
+     private Integer openingStock;
+     private Integer closingStock;
      private Date date;
      private String username;
      private String type;
@@ -43,14 +43,19 @@ public class StockEntries  implements java.io.Serializable {
      private String mode;
      private String description;
      private Date due;
-     private int subtotal;
-     private int count1;
+     private Integer subtotal;
+     private Integer count1;
      private String billnumber;
+     private String status;
 
     public StockEntries() {
     }
 
-    public StockEntries(String stockId, String stockName, String stockSupplierName, String category, int quantity, BigDecimal companyPrice, BigDecimal sellingPrice, int openingStock, int closingStock, Date date, String username, String type, String salesid, BigDecimal total, BigDecimal payment, BigDecimal balance, String mode, String description, Date due, int subtotal, int count1, String billnumber) {
+	
+    public StockEntries(String status) {
+        this.status = status;
+    }
+    public StockEntries(String stockId, String stockName, String stockSupplierName, String category, Integer quantity, BigDecimal companyPrice, BigDecimal sellingPrice, Integer openingStock, Integer closingStock, Date date, String username, String type, String salesid, BigDecimal total, BigDecimal payment, BigDecimal balance, String mode, String description, Date due, Integer subtotal, Integer count1, String billnumber, String status) {
        this.stockId = stockId;
        this.stockName = stockName;
        this.stockSupplierName = stockSupplierName;
@@ -73,6 +78,7 @@ public class StockEntries  implements java.io.Serializable {
        this.subtotal = subtotal;
        this.count1 = count1;
        this.billnumber = billnumber;
+       this.status = status;
     }
    
      @Id @GeneratedValue(strategy=IDENTITY)
@@ -88,7 +94,7 @@ public class StockEntries  implements java.io.Serializable {
     }
 
     
-    @Column(name="stock_id", nullable=false, length=120)
+    @Column(name="stock_id", length=120)
     public String getStockId() {
         return this.stockId;
     }
@@ -98,7 +104,7 @@ public class StockEntries  implements java.io.Serializable {
     }
 
     
-    @Column(name="stock_name", nullable=false, length=260)
+    @Column(name="stock_name", length=260)
     public String getStockName() {
         return this.stockName;
     }
@@ -108,7 +114,7 @@ public class StockEntries  implements java.io.Serializable {
     }
 
     
-    @Column(name="stock_supplier_name", nullable=false, length=200)
+    @Column(name="stock_supplier_name", length=200)
     public String getStockSupplierName() {
         return this.stockSupplierName;
     }
@@ -118,7 +124,7 @@ public class StockEntries  implements java.io.Serializable {
     }
 
     
-    @Column(name="category", nullable=false, length=120)
+    @Column(name="category", length=120)
     public String getCategory() {
         return this.category;
     }
@@ -128,17 +134,17 @@ public class StockEntries  implements java.io.Serializable {
     }
 
     
-    @Column(name="quantity", nullable=false)
-    public int getQuantity() {
+    @Column(name="quantity")
+    public Integer getQuantity() {
         return this.quantity;
     }
     
-    public void setQuantity(int quantity) {
+    public void setQuantity(Integer quantity) {
         this.quantity = quantity;
     }
 
     
-    @Column(name="company_price", nullable=false, precision=10)
+    @Column(name="company_price", precision=10)
     public BigDecimal getCompanyPrice() {
         return this.companyPrice;
     }
@@ -148,7 +154,7 @@ public class StockEntries  implements java.io.Serializable {
     }
 
     
-    @Column(name="selling_price", nullable=false, precision=10)
+    @Column(name="selling_price", precision=10)
     public BigDecimal getSellingPrice() {
         return this.sellingPrice;
     }
@@ -158,27 +164,27 @@ public class StockEntries  implements java.io.Serializable {
     }
 
     
-    @Column(name="opening_stock", nullable=false)
-    public int getOpeningStock() {
+    @Column(name="opening_stock")
+    public Integer getOpeningStock() {
         return this.openingStock;
     }
     
-    public void setOpeningStock(int openingStock) {
+    public void setOpeningStock(Integer openingStock) {
         this.openingStock = openingStock;
     }
 
     
-    @Column(name="closing_stock", nullable=false)
-    public int getClosingStock() {
+    @Column(name="closing_stock")
+    public Integer getClosingStock() {
         return this.closingStock;
     }
     
-    public void setClosingStock(int closingStock) {
+    public void setClosingStock(Integer closingStock) {
         this.closingStock = closingStock;
     }
 
     @Temporal(TemporalType.TIMESTAMP)
-    @Column(name="date", nullable=false, length=19)
+    @Column(name="date", length=19)
     public Date getDate() {
         return this.date;
     }
@@ -188,7 +194,7 @@ public class StockEntries  implements java.io.Serializable {
     }
 
     
-    @Column(name="username", nullable=false, length=120)
+    @Column(name="username", length=120)
     public String getUsername() {
         return this.username;
     }
@@ -198,7 +204,7 @@ public class StockEntries  implements java.io.Serializable {
     }
 
     
-    @Column(name="type", nullable=false, length=50)
+    @Column(name="type", length=50)
     public String getType() {
         return this.type;
     }
@@ -208,7 +214,7 @@ public class StockEntries  implements java.io.Serializable {
     }
 
     
-    @Column(name="salesid", nullable=false, length=120)
+    @Column(name="salesid", length=120)
     public String getSalesid() {
         return this.salesid;
     }
@@ -218,7 +224,7 @@ public class StockEntries  implements java.io.Serializable {
     }
 
     
-    @Column(name="total", nullable=false, precision=10)
+    @Column(name="total", precision=10)
     public BigDecimal getTotal() {
         return this.total;
     }
@@ -228,7 +234,7 @@ public class StockEntries  implements java.io.Serializable {
     }
 
     
-    @Column(name="payment", nullable=false, precision=10)
+    @Column(name="payment", precision=10)
     public BigDecimal getPayment() {
         return this.payment;
     }
@@ -238,7 +244,7 @@ public class StockEntries  implements java.io.Serializable {
     }
 
     
-    @Column(name="balance", nullable=false, precision=10)
+    @Column(name="balance", precision=10)
     public BigDecimal getBalance() {
         return this.balance;
     }
@@ -248,7 +254,7 @@ public class StockEntries  implements java.io.Serializable {
     }
 
     
-    @Column(name="mode", nullable=false, length=150)
+    @Column(name="mode", length=150)
     public String getMode() {
         return this.mode;
     }
@@ -258,7 +264,7 @@ public class StockEntries  implements java.io.Serializable {
     }
 
     
-    @Column(name="description", nullable=false, length=500)
+    @Column(name="description", length=500)
     public String getDescription() {
         return this.description;
     }
@@ -268,7 +274,7 @@ public class StockEntries  implements java.io.Serializable {
     }
 
     @Temporal(TemporalType.TIMESTAMP)
-    @Column(name="due", nullable=false, length=19)
+    @Column(name="due", length=19)
     public Date getDue() {
         return this.due;
     }
@@ -278,33 +284,43 @@ public class StockEntries  implements java.io.Serializable {
     }
 
     
-    @Column(name="subtotal", nullable=false)
-    public int getSubtotal() {
+    @Column(name="subtotal")
+    public Integer getSubtotal() {
         return this.subtotal;
     }
     
-    public void setSubtotal(int subtotal) {
+    public void setSubtotal(Integer subtotal) {
         this.subtotal = subtotal;
     }
 
     
-    @Column(name="count1", nullable=false)
-    public int getCount1() {
+    @Column(name="count1")
+    public Integer getCount1() {
         return this.count1;
     }
     
-    public void setCount1(int count1) {
+    public void setCount1(Integer count1) {
         this.count1 = count1;
     }
 
     
-    @Column(name="billnumber", nullable=false, length=120)
+    @Column(name="billnumber", length=120)
     public String getBillnumber() {
         return this.billnumber;
     }
     
     public void setBillnumber(String billnumber) {
         this.billnumber = billnumber;
+    }
+
+    
+    @Column(name="status", nullable=false, length=30)
+    public String getStatus() {
+        return this.status;
+    }
+    
+    public void setStatus(String status) {
+        this.status = status;
     }
 
 

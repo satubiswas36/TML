@@ -1,5 +1,5 @@
 package com.product.entity;
-// Generated Jan 28, 2018 2:52:02 PM by Hibernate Tools 4.3.1
+// Generated Feb 6, 2018 5:16:54 PM by Hibernate Tools 4.3.1
 
 
 import java.math.BigDecimal;
@@ -26,7 +26,7 @@ public class StockDetails  implements java.io.Serializable {
      private Integer id;
      private String stockId;
      private String stockName;
-     private int stockQuatity;
+     private Integer stockQuatity;
      private String supplierId;
      private BigDecimal companyPrice;
      private BigDecimal sellingPrice;
@@ -34,11 +34,16 @@ public class StockDetails  implements java.io.Serializable {
      private Date date;
      private Date expireDate;
      private String uom;
+     private String status;
 
     public StockDetails() {
     }
 
-    public StockDetails(String stockId, String stockName, int stockQuatity, String supplierId, BigDecimal companyPrice, BigDecimal sellingPrice, String category, Date date, Date expireDate, String uom) {
+	
+    public StockDetails(Date date) {
+        this.date = date;
+    }
+    public StockDetails(String stockId, String stockName, Integer stockQuatity, String supplierId, BigDecimal companyPrice, BigDecimal sellingPrice, String category, Date date, Date expireDate, String uom, String status) {
        this.stockId = stockId;
        this.stockName = stockName;
        this.stockQuatity = stockQuatity;
@@ -49,6 +54,7 @@ public class StockDetails  implements java.io.Serializable {
        this.date = date;
        this.expireDate = expireDate;
        this.uom = uom;
+       this.status = status;
     }
    
      @Id @GeneratedValue(strategy=IDENTITY)
@@ -64,7 +70,7 @@ public class StockDetails  implements java.io.Serializable {
     }
 
     
-    @Column(name="stock_id", nullable=false, length=120)
+    @Column(name="stock_id", length=120)
     public String getStockId() {
         return this.stockId;
     }
@@ -74,7 +80,7 @@ public class StockDetails  implements java.io.Serializable {
     }
 
     
-    @Column(name="stock_name", nullable=false, length=120)
+    @Column(name="stock_name", length=120)
     public String getStockName() {
         return this.stockName;
     }
@@ -84,17 +90,17 @@ public class StockDetails  implements java.io.Serializable {
     }
 
     
-    @Column(name="stock_quatity", nullable=false)
-    public int getStockQuatity() {
+    @Column(name="stock_quatity")
+    public Integer getStockQuatity() {
         return this.stockQuatity;
     }
     
-    public void setStockQuatity(int stockQuatity) {
+    public void setStockQuatity(Integer stockQuatity) {
         this.stockQuatity = stockQuatity;
     }
 
     
-    @Column(name="supplier_id", nullable=false, length=250)
+    @Column(name="supplier_id", length=250)
     public String getSupplierId() {
         return this.supplierId;
     }
@@ -104,7 +110,7 @@ public class StockDetails  implements java.io.Serializable {
     }
 
     
-    @Column(name="company_price", nullable=false, precision=10)
+    @Column(name="company_price", precision=10)
     public BigDecimal getCompanyPrice() {
         return this.companyPrice;
     }
@@ -114,7 +120,7 @@ public class StockDetails  implements java.io.Serializable {
     }
 
     
-    @Column(name="selling_price", nullable=false, precision=10)
+    @Column(name="selling_price", precision=10)
     public BigDecimal getSellingPrice() {
         return this.sellingPrice;
     }
@@ -124,7 +130,7 @@ public class StockDetails  implements java.io.Serializable {
     }
 
     
-    @Column(name="category", nullable=false, length=120)
+    @Column(name="category", length=120)
     public String getCategory() {
         return this.category;
     }
@@ -144,7 +150,7 @@ public class StockDetails  implements java.io.Serializable {
     }
 
     @Temporal(TemporalType.TIMESTAMP)
-    @Column(name="expire_date", nullable=false, length=19)
+    @Column(name="expire_date", length=19)
     public Date getExpireDate() {
         return this.expireDate;
     }
@@ -154,7 +160,7 @@ public class StockDetails  implements java.io.Serializable {
     }
 
     
-    @Column(name="uom", nullable=false, length=120)
+    @Column(name="uom", length=120)
     public String getUom() {
         return this.uom;
     }
@@ -162,10 +168,16 @@ public class StockDetails  implements java.io.Serializable {
     public void setUom(String uom) {
         this.uom = uom;
     }
-    public void setExpireDate(int TIMESTAMP) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
+    
+    @Column(name="status", length=30)
+    public String getStatus() {
+        return this.status;
+    }
+    
+    public void setStatus(String status) {
+        this.status = status;
+    }
 
 
 

@@ -1,5 +1,5 @@
 package com.product.entity;
-// Generated Jan 28, 2018 2:52:02 PM by Hibernate Tools 4.3.1
+// Generated Feb 6, 2018 5:16:54 PM by Hibernate Tools 4.3.1
 
 
 import javax.persistence.Column;
@@ -48,7 +48,7 @@ public class StockUser  implements java.io.Serializable {
     }
 
     
-    @Column(name="username", nullable=false, length=120)
+    @Column(name="username", length=120)
     public String getUsername() {
         return this.username;
     }
@@ -58,7 +58,7 @@ public class StockUser  implements java.io.Serializable {
     }
 
     
-    @Column(name="password", nullable=false, length=120)
+    @Column(name="password", length=120)
     public String getPassword() {
         return this.password;
     }
@@ -68,7 +68,7 @@ public class StockUser  implements java.io.Serializable {
     }
 
     
-    @Column(name="user_type", nullable=false, length=20)
+    @Column(name="user_type", length=20)
     public String getUserType() {
         return this.userType;
     }
@@ -78,7 +78,7 @@ public class StockUser  implements java.io.Serializable {
     }
 
     
-    @Column(name="answer", nullable=false, length=100)
+    @Column(name="answer", length=100)
     public String getAnswer() {
         return this.answer;
     }

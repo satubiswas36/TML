@@ -13,6 +13,7 @@ import org.hibernate.SessionFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -24,10 +25,10 @@ public class ProductController {
     SessionFactory factory = HibernateUtil.getSessionFactory();
 
     @RequestMapping(value = "/")
-    public String index() {
-        System.out.println("dhur page pacce na ");
+    public String index() {        
         return "index";
     }
+    
 
     @RequestMapping(value = "removeProduct")
     public String removeProduct(Model m) {

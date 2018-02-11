@@ -1,5 +1,5 @@
 package com.product.entity;
-// Generated Jan 28, 2018 2:52:02 PM by Hibernate Tools 4.3.1
+// Generated Feb 6, 2018 5:16:54 PM by Hibernate Tools 4.3.1
 
 
 import java.math.BigDecimal;
@@ -38,6 +38,10 @@ public class Transactions  implements java.io.Serializable {
     public Transactions() {
     }
 
+	
+    public Transactions(Date date) {
+        this.date = date;
+    }
     public Transactions(String type, String customer, String supplier, BigDecimal subtotal, BigDecimal payment, BigDecimal balance, Date due, Date date, String rid, String receiptid) {
        this.type = type;
        this.customer = customer;
@@ -64,7 +68,7 @@ public class Transactions  implements java.io.Serializable {
     }
 
     
-    @Column(name="type", nullable=false, length=50)
+    @Column(name="type", length=50)
     public String getType() {
         return this.type;
     }
@@ -74,7 +78,7 @@ public class Transactions  implements java.io.Serializable {
     }
 
     
-    @Column(name="customer", nullable=false, length=250)
+    @Column(name="customer", length=250)
     public String getCustomer() {
         return this.customer;
     }
@@ -84,7 +88,7 @@ public class Transactions  implements java.io.Serializable {
     }
 
     
-    @Column(name="supplier", nullable=false, length=250)
+    @Column(name="supplier", length=250)
     public String getSupplier() {
         return this.supplier;
     }
@@ -94,7 +98,7 @@ public class Transactions  implements java.io.Serializable {
     }
 
     
-    @Column(name="subtotal", nullable=false, precision=10)
+    @Column(name="subtotal", precision=10)
     public BigDecimal getSubtotal() {
         return this.subtotal;
     }
@@ -104,7 +108,7 @@ public class Transactions  implements java.io.Serializable {
     }
 
     
-    @Column(name="payment", nullable=false, precision=10)
+    @Column(name="payment", precision=10)
     public BigDecimal getPayment() {
         return this.payment;
     }
@@ -114,7 +118,7 @@ public class Transactions  implements java.io.Serializable {
     }
 
     
-    @Column(name="balance", nullable=false, precision=10)
+    @Column(name="balance", precision=10)
     public BigDecimal getBalance() {
         return this.balance;
     }
@@ -124,7 +128,7 @@ public class Transactions  implements java.io.Serializable {
     }
 
     @Temporal(TemporalType.TIMESTAMP)
-    @Column(name="due", nullable=false, length=19)
+    @Column(name="due", length=19)
     public Date getDue() {
         return this.due;
     }
@@ -144,7 +148,7 @@ public class Transactions  implements java.io.Serializable {
     }
 
     
-    @Column(name="rid", nullable=false, length=120)
+    @Column(name="rid", length=120)
     public String getRid() {
         return this.rid;
     }
@@ -154,7 +158,7 @@ public class Transactions  implements java.io.Serializable {
     }
 
     
-    @Column(name="receiptid", nullable=false, length=200)
+    @Column(name="receiptid", length=200)
     public String getReceiptid() {
         return this.receiptid;
     }

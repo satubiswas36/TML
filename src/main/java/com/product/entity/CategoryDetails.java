@@ -1,5 +1,5 @@
 package com.product.entity;
-// Generated Jan 28, 2018 2:52:02 PM by Hibernate Tools 4.3.1
+// Generated Feb 6, 2018 5:16:54 PM by Hibernate Tools 4.3.1
 
 
 import javax.persistence.Column;
@@ -44,7 +44,7 @@ public class CategoryDetails  implements java.io.Serializable {
     }
 
     
-    @Column(name="category_name", nullable=false, length=120)
+    @Column(name="category_name", length=120)
     public String getCategoryName() {
         return this.categoryName;
     }
@@ -54,7 +54,7 @@ public class CategoryDetails  implements java.io.Serializable {
     }
 
     
-    @Column(name="category_description", nullable=false, length=250)
+    @Column(name="category_description", length=250)
     public String getCategoryDescription() {
         return this.categoryDescription;
     }

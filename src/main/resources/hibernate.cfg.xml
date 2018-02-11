@@ -44,18 +44,25 @@ Contributor(s):
     <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
     <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
     <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/tml?zeroDateTimeBehavior=convertToNull</property>
-    <property name="hibernate.connection.username">root</property>    
-    <mapping class="com.product.entity.SupplierDetails"/>
-    <mapping class="com.product.entity.StockUser"/>
-    <mapping class="com.product.entity.StockEntries"/>
-    <mapping class="com.product.entity.StockDetails"/>
-    <mapping class="com.product.entity.StockSales"/>
+    <property name="hibernate.connection.username">root</property>
     <mapping class="com.product.entity.StockAvail"/>
-    <mapping class="com.product.entity.Transactions"/>
-    <mapping class="com.product.entity.CustomerDetails"/>
+    <mapping class="com.product.entity.InStock"/>
+    <mapping class="com.product.entity.Category"/>
+    <mapping class="com.product.entity.Supplier"/>
+    <mapping class="com.product.entity.CategoryDetails"/>
+    <mapping class="com.product.entity.StockUser"/>
+    <mapping class="com.product.entity.StockDetails"/>
     <mapping class="com.product.entity.UomDetails"/>
     <mapping class="com.product.entity.StoreDetails"/>
-    <mapping class="com.product.entity.CategoryDetails"/>
-    
+    <mapping class="com.product.entity.Customer"/>
+    <mapping class="com.product.entity.AvailableProduct"/>
+    <mapping class="com.product.entity.SupplierDetails"/>
+    <mapping class="com.product.entity.Transactions"/>
+    <mapping class="com.product.entity.StockEntries"/>
+    <mapping class="com.product.entity.StockSales"/>
+    <mapping class="com.product.entity.CustomerDetails"/>
+    <mapping class="com.product.entity.User"/>
+    <mapping class="com.product.entity.OutStock"/>
+    <mapping class="com.product.entity.ProductInfo"/>
   </session-factory>
 </hibernate-configuration>

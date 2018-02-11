@@ -1,5 +1,5 @@
 package com.product.entity;
-// Generated Jan 28, 2018 2:52:02 PM by Hibernate Tools 4.3.1
+// Generated Feb 6, 2018 5:16:54 PM by Hibernate Tools 4.3.1
 
 
 import java.math.BigDecimal;
@@ -29,7 +29,7 @@ public class StockSales  implements java.io.Serializable {
      private String category;
      private String supplierName;
      private BigDecimal sellingPrice;
-     private long quantity;
+     private BigDecimal quantity;
      private BigDecimal amount;
      private Date date;
      private String username;
@@ -37,21 +37,21 @@ public class StockSales  implements java.io.Serializable {
      private BigDecimal subtotal;
      private BigDecimal payment;
      private BigDecimal balance;
-     private long discount;
-     private long tax;
+     private Long discount;
+     private Long tax;
      private String taxDis;
-     private long disAmount;
-     private long grandTotal;
+     private Long disAmount;
+     private Long grandTotal;
      private Date due;
      private String mode;
      private String description;
-     private int count1;
+     private Integer count1;
      private String billnumber;
 
     public StockSales() {
     }
 
-    public StockSales(String transactionid, String stockName, String category, String supplierName, BigDecimal sellingPrice, long quantity, BigDecimal amount, Date date, String username, String customerId, BigDecimal subtotal, BigDecimal payment, BigDecimal balance, long discount, long tax, String taxDis, long disAmount, long grandTotal, Date due, String mode, String description, int count1, String billnumber) {
+    public StockSales(String transactionid, String stockName, String category, String supplierName, BigDecimal sellingPrice, BigDecimal quantity, BigDecimal amount, Date date, String username, String customerId, BigDecimal subtotal, BigDecimal payment, BigDecimal balance, Long discount, Long tax, String taxDis, Long disAmount, Long grandTotal, Date due, String mode, String description, Integer count1, String billnumber) {
        this.transactionid = transactionid;
        this.stockName = stockName;
        this.category = category;
@@ -90,7 +90,7 @@ public class StockSales  implements java.io.Serializable {
     }
 
     
-    @Column(name="transactionid", nullable=false, length=250)
+    @Column(name="transactionid", length=250)
     public String getTransactionid() {
         return this.transactionid;
     }
@@ -100,7 +100,7 @@ public class StockSales  implements java.io.Serializable {
     }
 
     
-    @Column(name="stock_name", nullable=false, length=200)
+    @Column(name="stock_name", length=200)
     public String getStockName() {
         return this.stockName;
     }
@@ -110,7 +110,7 @@ public class StockSales  implements java.io.Serializable {
     }
 
     
-    @Column(name="category", nullable=false, length=120)
+    @Column(name="category", length=120)
     public String getCategory() {
         return this.category;
     }
@@ -120,7 +120,7 @@ public class StockSales  implements java.io.Serializable {
     }
 
     
-    @Column(name="supplier_name", nullable=false, length=200)
+    @Column(name="supplier_name", length=200)
     public String getSupplierName() {
         return this.supplierName;
     }
@@ -130,7 +130,7 @@ public class StockSales  implements java.io.Serializable {
     }
 
     
-    @Column(name="selling_price", nullable=false, precision=10)
+    @Column(name="selling_price", precision=10)
     public BigDecimal getSellingPrice() {
         return this.sellingPrice;
     }
@@ -140,17 +140,17 @@ public class StockSales  implements java.io.Serializable {
     }
 
     
-    @Column(name="quantity", nullable=false)
-    public long getQuantity() {
+    @Column(name="quantity", precision=10)
+    public BigDecimal getQuantity() {
         return this.quantity;
     }
     
-    public void setQuantity(long quantity) {
+    public void setQuantity(BigDecimal quantity) {
         this.quantity = quantity;
     }
 
     
-    @Column(name="amount", nullable=false, precision=10)
+    @Column(name="amount", precision=10)
     public BigDecimal getAmount() {
         return this.amount;
     }
@@ -160,7 +160,7 @@ public class StockSales  implements java.io.Serializable {
     }
 
     @Temporal(TemporalType.DATE)
-    @Column(name="date", nullable=false, length=10)
+    @Column(name="date", length=10)
     public Date getDate() {
         return this.date;
     }
@@ -170,7 +170,7 @@ public class StockSales  implements java.io.Serializable {
     }
 
     
-    @Column(name="username", nullable=false, length=120)
+    @Column(name="username", length=120)
     public String getUsername() {
         return this.username;
     }
@@ -180,7 +180,7 @@ public class StockSales  implements java.io.Serializable {
     }
 
     
-    @Column(name="customer_id", nullable=false, length=120)
+    @Column(name="customer_id", length=120)
     public String getCustomerId() {
         return this.customerId;
     }
@@ -190,7 +190,7 @@ public class StockSales  implements java.io.Serializable {
     }
 
     
-    @Column(name="subtotal", nullable=false, precision=10)
+    @Column(name="subtotal", precision=10)
     public BigDecimal getSubtotal() {
         return this.subtotal;
     }
@@ -200,7 +200,7 @@ public class StockSales  implements java.io.Serializable {
     }
 
     
-    @Column(name="payment", nullable=false, precision=10)
+    @Column(name="payment", precision=10)
     public BigDecimal getPayment() {
         return this.payment;
     }
@@ -210,7 +210,7 @@ public class StockSales  implements java.io.Serializable {
     }
 
     
-    @Column(name="balance", nullable=false, precision=10)
+    @Column(name="balance", precision=10)
     public BigDecimal getBalance() {
         return this.balance;
     }
@@ -220,27 +220,27 @@ public class StockSales  implements java.io.Serializable {
     }
 
     
-    @Column(name="discount", nullable=false, precision=10, scale=0)
-    public long getDiscount() {
+    @Column(name="discount", precision=10, scale=0)
+    public Long getDiscount() {
         return this.discount;
     }
     
-    public void setDiscount(long discount) {
+    public void setDiscount(Long discount) {
         this.discount = discount;
     }
 
     
-    @Column(name="tax", nullable=false, precision=10, scale=0)
-    public long getTax() {
+    @Column(name="tax", precision=10, scale=0)
+    public Long getTax() {
         return this.tax;
     }
     
-    public void setTax(long tax) {
+    public void setTax(Long tax) {
         this.tax = tax;
     }
 
     
-    @Column(name="tax_dis", nullable=false, length=100)
+    @Column(name="tax_dis", length=100)
     public String getTaxDis() {
         return this.taxDis;
     }
@@ -250,27 +250,27 @@ public class StockSales  implements java.io.Serializable {
     }
 
     
-    @Column(name="dis_amount", nullable=false, precision=10, scale=0)
-    public long getDisAmount() {
+    @Column(name="dis_amount", precision=10, scale=0)
+    public Long getDisAmount() {
         return this.disAmount;
     }
     
-    public void setDisAmount(long disAmount) {
+    public void setDisAmount(Long disAmount) {
         this.disAmount = disAmount;
     }
 
     
-    @Column(name="grand_total", nullable=false, precision=10, scale=0)
-    public long getGrandTotal() {
+    @Column(name="grand_total", precision=10, scale=0)
+    public Long getGrandTotal() {
         return this.grandTotal;
     }
     
-    public void setGrandTotal(long grandTotal) {
+    public void setGrandTotal(Long grandTotal) {
         this.grandTotal = grandTotal;
     }
 
     @Temporal(TemporalType.DATE)
-    @Column(name="due", nullable=false, length=10)
+    @Column(name="due", length=10)
     public Date getDue() {
         return this.due;
     }
@@ -280,7 +280,7 @@ public class StockSales  implements java.io.Serializable {
     }
 
     
-    @Column(name="mode", nullable=false, length=250)
+    @Column(name="mode", length=250)
     public String getMode() {
         return this.mode;
     }
@@ -290,7 +290,7 @@ public class StockSales  implements java.io.Serializable {
     }
 
     
-    @Column(name="description", nullable=false, length=500)
+    @Column(name="description", length=500)
     public String getDescription() {
         return this.description;
     }
@@ -300,17 +300,17 @@ public class StockSales  implements java.io.Serializable {
     }
 
     
-    @Column(name="count1", nullable=false)
-    public int getCount1() {
+    @Column(name="count1")
+    public Integer getCount1() {
         return this.count1;
     }
     
-    public void setCount1(int count1) {
+    public void setCount1(Integer count1) {
         this.count1 = count1;
     }
 
     
-    @Column(name="billnumber", nullable=false, length=120)
+    @Column(name="billnumber", length=120)
     public String getBillnumber() {
         return this.billnumber;
     }

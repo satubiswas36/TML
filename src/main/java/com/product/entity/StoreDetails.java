@@ -1,5 +1,5 @@
 package com.product.entity;
-// Generated Jan 28, 2018 2:52:02 PM by Hibernate Tools 4.3.1
+// Generated Feb 6, 2018 5:16:54 PM by Hibernate Tools 4.3.1
 
 
 import javax.persistence.Column;
@@ -60,7 +60,7 @@ public class StoreDetails  implements java.io.Serializable {
     }
 
     
-    @Column(name="name", nullable=false, length=100)
+    @Column(name="name", length=100)
     public String getName() {
         return this.name;
     }
@@ -70,7 +70,7 @@ public class StoreDetails  implements java.io.Serializable {
     }
 
     
-    @Column(name="log", nullable=false, length=100)
+    @Column(name="log", length=100)
     public String getLog() {
         return this.log;
     }
@@ -80,7 +80,7 @@ public class StoreDetails  implements java.io.Serializable {
     }
 
     
-    @Column(name="type", nullable=false, length=100)
+    @Column(name="type", length=100)
     public String getType() {
         return this.type;
     }
@@ -90,7 +90,7 @@ public class StoreDetails  implements java.io.Serializable {
     }
 
     
-    @Column(name="address", nullable=false, length=100)
+    @Column(name="address", length=100)
     public String getAddress() {
         return this.address;
     }
@@ -100,7 +100,7 @@ public class StoreDetails  implements java.io.Serializable {
     }
 
     
-    @Column(name="place", nullable=false, length=100)
+    @Column(name="place", length=100)
     public String getPlace() {
         return this.place;
     }
@@ -110,7 +110,7 @@ public class StoreDetails  implements java.io.Serializable {
     }
 
     
-    @Column(name="city", nullable=false, length=100)
+    @Column(name="city", length=100)
     public String getCity() {
         return this.city;
     }
@@ -120,7 +120,7 @@ public class StoreDetails  implements java.io.Serializable {
     }
 
     
-    @Column(name="phone", nullable=false, length=100)
+    @Column(name="phone", length=100)
     public String getPhone() {
         return this.phone;
     }
@@ -130,7 +130,7 @@ public class StoreDetails  implements java.io.Serializable {
     }
 
     
-    @Column(name="email", nullable=false, length=100)
+    @Column(name="email", length=100)
     public String getEmail() {
         return this.email;
     }
@@ -140,7 +140,7 @@ public class StoreDetails  implements java.io.Serializable {
     }
 
     
-    @Column(name="web", nullable=false, length=100)
+    @Column(name="web", length=100)
     public String getWeb() {
         return this.web;
     }
@@ -150,7 +150,7 @@ public class StoreDetails  implements java.io.Serializable {
     }
 
     
-    @Column(name="pin", nullable=false, length=100)
+    @Column(name="pin", length=100)
     public String getPin() {
         return this.pin;
     }
